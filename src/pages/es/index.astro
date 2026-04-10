@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Sobre mí | Mi Portfolio" lang="es">
+  <section>
+    <h1>Sobre mí</h1>
+      <p>
+        Estudiante de último año de <strong>Ingeniería del Software (modalidad Bilingüe)</strong>. 
+        Con experiencia profesional en el Desarrollo Backend. 
+      </p> 
+      <p>
+        He trabajado con múltiples lenguajes y frameworks, lo que demuestra que me adapto rápido 
+        a nuevas tecnologías. Me preocupo por la <strong>calidad del código</strong>, el impacto 
+        en el usuario y construir sistemas robustos de manera colaborativa. 
+      </p>
+      
+      <p>
+        Busco crecer en un equipo con experiencia.
+      </p>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Estilos específicos para esta página (encapsulados automáticamente por Astro) */
+  .about-section {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+  }
+
+  .content p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    max-width: 65ch; /* Longitud de línea óptima para lectura */
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
