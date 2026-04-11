@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Experience | My Portfolio" lang="en">
+  <section>
+    <h2>Experience</h2>
+
+    <article>
+      <h3>Backend Development Intern — Infone</h3>
+      <p class="date">
+        <time datetime="2025-09">September 2025</time> — <time
+          datetime="2025-11">November 2025</time
+        >
+      </p>
+
+      <p>
+        During my curricular internship at the startup <strong>Infone</strong>,
+        I actively participated in their expansion into the real estate sector.
+        My role focused on designing and developing critical automation
+        processes for their business model from scratch:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Real Estate Classification Pipeline:</strong> Designed and implemented
+          an automated pipeline in FastAPI to determine the financial viability of
+          clients. The system automates the matching between user profiles and eligible
+          housing.
+        </li>
+        <li>
+          <strong>Data Extraction (OCR):</strong> Integrated <strong
+            >AWS Textract</strong
+          > and <strong>S3</strong> to process documents (PDFs and images), achieving
+          automated data extraction and eliminating manual workflows.
+        </li>
+        <li>
+          <strong>Traceability and Observability:</strong> Implemented a structured
+          logging system using <strong>structlog</strong>, significantly
+          improving system monitoring and production error resolution.
+        </li>
+        <li>
+          <strong>Web Scraping:</strong> Researched and developed solutions with <strong
+            >Browserbase (Stagehand)</strong
+          > for the automated location of real estate assets listed by private owners.
+        </li>
+        <li>
+          <strong>Soft Skills:</strong> The remote startup environment enhanced my
+          capacity for <strong>autonomous work</strong>, time management, and
+          technical proactivity.
+        </li>
+      </ul>
+      <p>
+        <a
+          href="https://github.com/SergioMulet/OCR-payslip-evaluator"
+          target="_blank"
+          rel="noopener noreferrer">View repository</a
+        >
+      </p>
+      <p class="stack-list">
+        <strong>Stack:</strong> Python, FastAPI, AWS (S3, Textract), Structlog, Browserbase,
+        Git.
+      </p>
+    </article>
+  </section>
+</BaseLayout>

@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Projects | My Portfolio" lang="en">
+  <section>
+    <h2>Engineering Projects</h2>
+
+    <article>
+      <h3>Wichat — Quiz Web App</h3>
+      <p class="date">Software Architecture | 2025</p>
+      <p>
+        Web application inspired by the TV show "Saber y Ganar". It implements a
+        robust architecture based on the <strong>Gateway Pattern</strong> to centralize
+        communication between microservices. Includes the integration of an <strong
+          >LLM Chatbot</strong
+        > to enhance user experience. The project was developed following Agile methodologies.
+      </p>
+      <p>
+        <a
+          href="https://github.com/Arquisoft/wichat_en2a"
+          target="_blank"
+          rel="noopener noreferrer">View repository</a
+        >
+      </p>
+      <p class="stack-list">
+        <strong>Stack:</strong> React, Node.js, Gateway Pattern, LLM, MongoDB.
+      </p>
+    </article>
+
+    <article>
+      <h3>RecadOS — Android App</h3>
+      <p class="date">Mobile Software Development | 2025</p>
+      <p>
+        Native application for collaborative errand and task management.
+        Developed in <strong>Kotlin</strong>, it leverages the <strong
+          >Google Cloud Firebase</strong
+        > ecosystem for real-time data persistence and user authentication. The project
+        was carried out following the SCRUM framework.
+      </p>
+      <p>
+        <a
+          href="https://github.com/SergioMulet/RecadOS"
+          target="_blank"
+          rel="noopener noreferrer">View repository</a
+        >
+      </p>
+      <p class="stack-list">
+        <strong>Stack:</strong> Kotlin, Android SDK, Firebase.
+      </p>
+    </article>
+
+    <article>
+      <h3>Information Retrieval Systems</h3>
+      <p class="date">Information repositories | 2024</p>
+      <p>
+        Development of an advanced search engine comparing lexical (<strong
+          >BM25</strong
+        >) and semantic (<strong>Vector Embeddings</strong>) retrieval methods.
+        The project focuses on result optimization through query expansion and <strong
+          >Reranking</strong
+        > techniques, evaluating system performance using precision and F1-Score metrics
+        on the NFCorpus dataset.
+      </p>
+      <p>
+        <a
+          href="https://github.com/SergioMulet/Information_retrieval"
+          target="_blank"
+          rel="noopener noreferrer">View repository</a
+        >
+      </p>
+      <p class="stack-list">
+        <strong>Stack:</strong> Python, BM25s, ChromaDB, Sentence-Transformers, PyTorch.
+      </p>
+    </article>
+
+    <article>
+      <h3>Corporate Network Simulation</h3>
+      <p class="date">Systems and Network Administration | 2025</p>
+      <p>
+        Design and deployment of an internal network infrastructure using <strong
+          >Docker Compose</strong
+        >. The project orchestrates a complete business environment including a
+        DNS server (BIND9) for internal name resolution, an Nginx web server, a
+        MySQL database, and custom clients, validating connectivity and data
+        flow in an isolated and controlled environment.
+      </p>
+      <p>
+        <a
+          href="https://github.com/SergioMulet/Red-Docker"
+          target="_blank"
+          rel="noopener noreferrer">View repository</a
+        >
+      </p>
+      <p class="stack-list">
+        <strong>Stack:</strong> Docker, Docker Compose, BIND9 (DNS), Nginx, MySQL.
+      </p>
+    </article>
+  </section>
+</BaseLayout>

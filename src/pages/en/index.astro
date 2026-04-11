@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+const photoPath = `${base}/sergio_mulet.webp`
+---
+
+<BaseLayout title="About me | My Portfolio" lang="en">
+  <section>
+    <h2>About me</h2>
+    <p>
+      Final-year Software Engineering student (English Itinerary) at Universidad 
+      de Oviedo. I have completed a professional internship in backend development, 
+      where I built real data pipelines using Python, AWS and PostgreSQL in a 
+      production environment.
+    </p>
+    <p>
+      I'm comfortable working across languages and technologies (Python, Java, 
+      Node.js, Kotlin, C#) and I enjoy tackling problems end-to-end, from design 
+      to deployment. I care about clean code, user impact and effective teamwork.
+    </p>
+    <p>
+      I'm looking for an opportunity to keep growing alongside experienced engineers, 
+      ideally in an environment where technology makes a real difference.
+    </p>
+  </section>
+
+  <section class="contact-section">
+    <h2>Contact & Socials</h2>
+    <ul>
+      <li>
+        GitHub:
+        <a
+          href="https://github.com/SergioMulet"
+          target="_blank"
+          rel="noopener noreferrer">github.com/SergioMulet</a
+        >
+      </li>
+      <li>
+        LinkedIn:
+        <a
+          href="https://linkedin.com/in/sergiomulet"
+          target="_blank"
+          rel="noopener noreferrer">linkedin.com/in/sergiomulet</a
+        >
+      </li>
+      <li>
+        Email:
+        <a href="mailto:sergiokma15@gmail.com">sergiokma15@gmail.com</a>
+      </li>
+      <li>
+        Phone:
+        <a href="tel:+34684639102">+34 684 639 102</a>
+      </li>
+    </ul>
+    <figure>
+      <img src={photoPath}, alt="Sergio Mulet's profile picture"/>
+    </figure>
+  </section>
+</BaseLayout>

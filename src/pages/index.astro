@@ -1,19 +1,20 @@
 ---
 
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Redirecting...</title>
-		<script>
-			const lang = navigator.language.startsWith('es') ? 'es' : 'en';
-            const base = window.location.pathname.replace(/\/$/, '');
-            window.location.replace(`${base}/${lang}/`);
-		</script>
-	</head>
-	<body>
-		<h1>Redirecting...</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Redirecting...</title>
+    <script>
+      const lang = navigator.language.startsWith("es") ? "es" : "en";
+      const base = "/portfolio/";
+      window.location.replace(`${base}${lang}/`);
+    </script>
+  </head>
+  <body>
+    <h1>Redirecting...</h1>
+  </body>
 </html>

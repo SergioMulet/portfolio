@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Proyectos | Mi Portfolio" lang="es">
+  <section>
+    <h2>Proyectos de Ingeniería</h2>
+
+    <article>
+      <h3>Wichat — Quiz Web App</h3>
+      <p class="date">Arquitectura del Software | 2025</p>
+      <p>
+        Aplicación web inspirada en el concurso "Saber y Ganar". Implementa una
+        arquitectura robusta basada en el <strong>Gateway Pattern</strong> para centralizar
+        la comunicación entre microservicios. Incluye la integración de un <strong
+          >LLM Chatbot</strong
+        > para dinamizar la experiencia del usuario. El proyecto fue realizando siguiendo
+        metodologías ágiles.
+      </p>
+      <p>
+        <a
+          href="https://github.com/Arquisoft/wichat_en2a"
+          target="_blank"
+          rel="noopener noreferrer">Ver repositorio</a>
+      </p>
+      <p class="stack-list">
+        <strong>Stack:</strong> React, Node.js, Gateway Pattern, LLM, MongoDB.
+      </p>
+    </article>
+
+    <article>
+      <h3>RecadOS — Android App</h3>
+      <p class="date">Software para dispositivos móviles | 2025</p>
+      <p>
+        Aplicación nativa para la gestión de recados y tareas colaborativas.
+        Desarrollada en <strong>Kotlin</strong>, utiliza el ecosistema de <strong
+          >Google Cloud Firebase</strong
+        > para la persistencia de datos en tiempo real y la autenticación de usuarios.
+        El proyecto fue realizado siguinedo SCRUM.
+      </p>
+      <p>
+        <a
+          href="https://github.com/SergioMulet/RecadOS"
+          target="_blank"
+          rel="noopener noreferrer">Ver repositorio</a>
+      </p>
+      <p class="stack-list">
+        <strong>Stack:</strong> Kotlin, Android SDK, Firebase.
+      </p>
+    </article>
+
+    <article>
+      <h3>Recuperación de información</h3>
+      <p class="date">Repositorios de información | 2024</p>
+      <p>
+        Desarrollo de un motor de búsqueda avanzado que compara métodos de
+        recuperación léxica (**BM25**) y semántica (**Vector Embeddings**). El
+        proyecto se centra en la optimización de resultados mediante expansión
+        de consultas y técnicas de <strong>Reranking</strong>, evaluando el
+        rendimiento del sistema con métricas de precisión y F1-Score sobre el
+        dataset NFCorpus.
+      </p>
+      <p>
+        <a
+          href="https://github.com/SergioMulet/Information_retrieval"
+          target="_blank"
+          rel="noopener noreferrer">Ver repositorio</a>
+      </p>
+      <p class="stack-list">
+        <strong>Stack:</strong> Python, BM25s, ChromaDB, Sentence-Transformers, PyTorch.
+      </p>
+    </article>
+
+    <article>
+      <h3>Simulación de Red Corporativa</h3>
+      <p class="date">Administración de Sistemas y Redes | 2025</p>
+      <p>
+        Diseño y despliegue de una infraestructura de red interna mediante <strong
+          >Docker Compose</strong
+        >. El proyecto orquesta un entorno empresarial completo que incluye un
+        servidor DNS (BIND9) para resolución de nombres interna, un servidor web
+        Nginx, una base de datos MySQL y clientes personalizados, permitiendo
+        validar la conectividad y el flujo de datos en un entorno aislado y
+        controlado.
+      </p>
+      <p>
+        <a
+          href="https://github.com/SergioMulet/Red-Docker"
+          target="_blank"
+          rel="noopener noreferrer">Ver repositorio</a>
+      </p>
+      <p class="stack-list">
+        <strong>Stack:</strong> Docker, Docker Compose, BIND9 (DNS), Nginx, MySQL.
+      </p>
+    </article>
+  </section>
+</BaseLayout>

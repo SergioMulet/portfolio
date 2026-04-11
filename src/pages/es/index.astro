@@ -1,46 +1,61 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+const photoPath = `${base}/sergio_mulet.webp`;
 ---
 
 <BaseLayout title="Sobre mí | Mi Portfolio" lang="es">
   <section>
-    <h1>Sobre mí</h1>
-      <p>
-        Estudiante de último año de <strong>Ingeniería del Software (modalidad Bilingüe)</strong>. 
-        Con experiencia profesional en el Desarrollo Backend. 
-      </p> 
-      <p>
-        He trabajado con múltiples lenguajes y frameworks, lo que demuestra que me adapto rápido 
-        a nuevas tecnologías. Me preocupo por la <strong>calidad del código</strong>, el impacto 
-        en el usuario y construir sistemas robustos de manera colaborativa. 
-      </p>
-      
-      <p>
-        Busco crecer en un equipo con experiencia.
-      </p>
+    <h2>Sobre mí</h2>
+    <p>
+      Estudiante de último año de Ingeniería del Software (modalidad Bilingüe) 
+      en la Universidad de Oviedo. He completado prácticas profesionales en 
+      desarrollo backend, donde construí pipelines de datos reales con Python, 
+      AWS y PostgreSQL en un entorno de producción.
+    </p>
+    <p>
+      Me muevo con soltura entre lenguajes y tecnologías (Python, Java, Node.js, 
+      Kotlin, C#) y disfruto resolviendo problemas desde el diseño hasta el 
+      despliegue. Me importa escribir código limpio, entender el impacto en el 
+      usuario y trabajar bien en equipo.
+    </p>
+    <p>
+      Busco una oportunidad donde seguir creciendo junto a gente con experiencia, 
+      preferiblemente en un entorno donde la tecnología tenga impacto real.
+    </p>
+  </section>
+
+  <section class="contact-section">
+    <h2>Contacto y redes</h2>
+    <ul>
+      <li>
+        GitHub:
+        <a
+          href="https://github.com/SergioMulet"
+          target="_blank"
+          rel="noopener noreferrer">github.com/SergioMulet</a
+        >
+      </li>
+      <li>
+        LinkedIn:
+        <a
+          href="https://linkedin.com/in/tu-perfil"
+          target="_blank"
+          rel="noopener noreferrer">linkedin.com/in/sergiomulet</a
+        >
+      </li>
+      <li>
+        Correo electrónico:
+        <a href="mailto:sergiokma15@gmail.com">sergiokma15@gmail.com</a>
+      </li>
+      <li>
+        Teléfono:
+        <a href="tel:+34684639102">+34 684 639 102</a>
+      </li>
+    </ul>
+
+    <figure>
+      <img src={photoPath} , alt="Foto de perfil Sergio Mulet" />
+    </figure>
   </section>
 </BaseLayout>
-
-<style>
-  /* Estilos específicos para esta página (encapsulados automáticamente por Astro) */
-  .about-section {
-    animation: fadeIn 0.5s ease-in;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--primary);
-  }
-
-  .content p {
-    margin-bottom: 1.2rem;
-    font-size: 1.1rem;
-    max-width: 65ch; /* Longitud de línea óptima para lectura */
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-</style>

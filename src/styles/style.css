@@ -1,41 +1,100 @@
-/* src/styles/style.css */
-
-:root {
-  --primary: #2563eb;
-  --text: #1e293b;
-  --text-light: #64748b;
-  --bg: #ffffff;
-}
+/* Default styles */
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
-  color: var(--text);
-  background-color: var(--bg);
+  font-family: Tahoma, Arial, sans-serif;
+  color: #1c1c1c;
+  background-color: #c6eeff;
   line-height: 1.6;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary);
 }
 
-p {
-  margin-bottom: 1.2rem;
-  font-size: 1.1rem;
+h2 {
+  font-size: 2rem;
 }
 
-strong {
-  color: var(--text);
-  font-weight: 600;
+h1,
+h2,
+h3 {
+  color: #004880;
 }
 
-/* Animación de entrada para todas las secciones principales */
 section {
   animation: fadeIn 0.5s ease-in;
 }
 
+header button {
+  width: 4.5rem;
+  height: 3rem;
+  border: none;
+  background: transparent; 
+  padding: 0; 
+  cursor: pointer;
+  outline: none; 
+
+  background-image: var(--flag-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+header button:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  color: #323e48;
+}
+
+nav a {
+  color: inherit;
+}
+
+nav a.active {
+  color: #990000;
+}
+
+h1 a {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin:0;
+}
+
+ul li {
+  margin-bottom: 0.75rem;
+}
+
+figure img{
+    width: 6rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: 25%;
+    border: 0.2rem solid white;
+}
+
+figure{
+  margin-top: 0;
+}
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

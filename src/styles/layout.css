@@ -1,0 +1,42 @@
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5rem;
+  flex-direction: row;
+}
+
+header button{
+    margin-left: auto;
+}
+
+.contact-section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.contact-section h2{
+    flex:1 1 100%;
+}
+
+section figure{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 800px){
+    nav{
+        flex-direction: column;
+    }
+
+    section figure {
+        justify-content: center;
+        width: 100%;
+    }
+
+    section ul{
+        text-align: center;
+    }
+}

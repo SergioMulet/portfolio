@@ -1,35 +1,84 @@
 ---
-import '../styles/layout.css';
-import '../styles/style.css';
+import "../styles/layout.css";
+import "../styles/style.css";
+import { Translator, type Language } from "../ts/translator";
 
+interface Props {
+  title: string;
+  lang: Language;
+}
 const { title, lang } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const translator = new Translator(lang);
+const nextLang = lang === "es" ? "en" : "es";
+
+const pathname = Astro.url.pathname.replace(/\/$/, "");
+const isActive = (path: string) => {
+  const href = translator.route(path, base).replace(/\/$/, "");
+  return path === "" ? pathname === href : pathname.startsWith(href);
+};
 ---
-<!DOCTYPE html>
-<html lang="es">
-<head>
+
+<!doctype html>
+<html lang={lang}>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href={`${base}/favicon.ico`} />
     <title>{title}</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>
-            <a href={`${base}${lang}/`} title="Página de inicio">
-                Sergio Mulet Alonso
-            </a>
-        </h1>
-        <nav>
-            <a href={`${base}${lang}/`} title="Sobre mí">Sobre mí</a>
-            <a href={`${base}${lang}/experiencia`} title="Experiencia">Experiencia</a>
-            <a href={`${base}${lang}/proyectos`} title="Proyectos">Proyectos</a>
-        </nav>
+      <h1>
+        <a
+          href={translator.route("", base)}
+          title={translator.getLabel("home")}
+        >
+          Sergio Mulet Alonso
+        </a>
+      </h1>
+      <nav>
+        <a
+          href={translator.route("", base)}
+          title={translator.getLabel("about")}
+          class:list={[{ active: isActive("") }]}
+          >{translator.getLabel("about")}</a
+        >
+        <a
+          href={translator.route("experience", base)}
+          title={translator.getLabel("exp")}
+          class:list={[{ active: isActive("experience") }]}
+          >{translator.getLabel("exp")}</a
+        >
+        <a
+          href={translator.route("projects", base)}
+          title={translator.getLabel("projects")}
+          class:list={[{ active: isActive("projects") }]}
+          >{translator.getLabel("projects")}</a
+        >
+
+        <button
+          data-current-lang={lang}
+          data-next-lang={nextLang}
+          style={`--flag-url: url('${base}/flags/flag_${nextLang}.svg')`}
+          title={nextLang === "es" ? "Cambiar a Español" : "Switch to English"}
+        >
+        </button>
+      </nav>
     </header>
     <main>
-        <slot></slot>
+      <slot />
     </main>
     <footer>
-        <p>© {new Date().getFullYear()} - Ingeniero de Software</p>
+      <p>
+        © {new Date().getFullYear()} - Sergio Mulet Alonso - {
+          translator.getLabel("role")
+        }
+      </p>
     </footer>
-</body>
+    <script>
+      import { LanguageSwitcher } from "../ts/languageSwitcher";
+      LanguageSwitcher.init();
+    </script>
+  </body>
 </html>

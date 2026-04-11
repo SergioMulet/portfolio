@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Experiencia | Mi Portfolio" lang="es">
+  <section>
+    <h2>Experiencia</h2>
+
+    <article>
+      <h3>Prácticas Desarrollo Backend — Infone</h3>
+      <p class="date">
+        <time datetime="2025-09">Septiembre 2025</time> — <time
+          datetime="2025-11">Noviembre 2025</time
+        >
+      </p>
+
+      <p>
+        Durante mis prácticas curriculares en la startup <strong>Infone</strong
+        >, participé activamente en su expansión hacia el sector inmobiliario.
+        Mi rol se centró en diseñar y desarrollar desde cero procesos de
+        automatización críticos para el modelo de negocio:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Pipeline de Clasificación Inmobiliaria:</strong> Diseñé e implementé
+          un pipeline automatizado en FastAPI para determinar la viabilidad financiera
+          de clientes. El sistema automatiza el emparejamiento entre perfiles de usuarios
+          y viviendas aptas.
+        </li>
+        <li>
+          <strong>Extracción de Datos (OCR):</strong> Integré AWS Textract y S3 para
+          procesar documentos (PDF e imágenes), logrando la extracción automatizada
+          de datos y eliminando procesos manuales.
+        </li>
+        <li>
+          <strong>Trazabilidad y Observabilidad:</strong> Implementé un sistema de
+          logging estructurado con structlog, mejorando la monitorización y la resolución
+          de errores en producción.
+        </li>
+        <li>
+          <strong>Web Scraping:</strong> Investigué y desarrollé soluciones con Browserbase
+          (Stagehand) para la localización automatizada de activos inmobiliarios de
+          particulares.
+        </li>
+        <li>
+          <strong>Soft Skills:</strong> El entorno de startup remota potenció mi capacidad
+          de trabajo autónomo, gestión de tiempos y proactividad técnica.
+        </li>
+      </ul>
+      <p>
+        <a
+          href="https://github.com/SergioMulet/OCR-payslip-evaluator"
+          target="_blank"
+          rel="noopener noreferrer">Ver repositorio</a>
+      </p>
+      <p class="stack-list">
+        <strong>Stack:</strong> Python, FastAPI, AWS (S3, Textract), Structlog, Browserbase,
+        Git.
+      </p>
+    </article>
+  </section>
+</BaseLayout>
