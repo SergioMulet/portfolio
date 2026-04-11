@@ -52,6 +52,8 @@ header button:hover {
 
 footer {
   color: #323e48;
+  font-size: 0.8rem;
+  margin-top: 4rem;
 }
 
 nav a {
