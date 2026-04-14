@@ -10,7 +10,6 @@ interface Props {
 const { title, lang } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const translator = new Translator(lang);
-const nextLang = lang === "es" ? "en" : "es";
 
 const pathname = Astro.url.pathname.replace(/\/$/, "");
 const isActive = (path: string) => {
@@ -69,14 +68,20 @@ const isActive = (path: string) => {
           class:list={[{ active: isActive("projects") }]}
           >{translator.getLabel("projects")}</a
         >
-
-        <button
-          data-current-lang={lang}
-          data-next-lang={nextLang}
-          style={`--flag-url: url('${base}/flags/flag_${nextLang}.svg')`}
-          title={nextLang === "es" ? "Cambiar a Español" : "Switch to English"}
-        >
-        </button>
+        <section>
+          <button
+          data-lang="es"
+          style={`--flag-url: url('${base}/flags/flag_es.svg')`}
+          title="Cambiar a Español"
+          >
+          </button>
+          <button
+            data-lang="en"
+            style={`--flag-url: url('${base}/flags/flag_en.svg')`}
+            title="Switch to English"
+          >
+          </button>
+        </section>
       </nav>
     </header>
     <main>

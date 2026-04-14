@@ -1,20 +1,28 @@
 import { type Language } from "./translator";
 
 export class LanguageSwitcher {
-
   static init(): void {
-    const btn = document.querySelector("header button") as HTMLElement;
-    if (!btn) return;
+    const buttons = document.querySelectorAll(
+      "header section button",
+    ) as NodeListOf<HTMLButtonElement>;
 
-    btn.addEventListener("click", () => {
-      const currentLang = btn.getAttribute("data-current-lang") as Language;
-      const nextLang = btn.getAttribute("data-next-lang");
-      const currentPath = window.location.pathname;
-
-      if (currentLang && nextLang) {
-        const newPath = currentPath.replace(`/${currentLang}/`, `/${nextLang}/`);
-        window.location.href = newPath;
+    buttons.forEach((button) => {
+      let targetLang = button.getAttribute("data-lang") as Language;
+      if(targetLang == document.documentElement.lang){
+        button.disabled = true;
       }
+      button.addEventListener("click", () => {
+        let currentLang = document.documentElement.lang as Language;
+        let currentPath = window.location.pathname;
+        if (targetLang !== currentLang) {
+          button.disabled = true;
+          const newPath = currentPath.replace(
+            `/${currentLang}/`,
+            `/${targetLang}/`,
+          );
+          window.location.href = newPath;
+        }
+      });
     });
   }
 }
