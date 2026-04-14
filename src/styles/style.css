@@ -104,3 +104,10 @@ figure{
     transform: translateY(0);
   }
 }
+
+@media(max-width: 800px){
+  body{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
