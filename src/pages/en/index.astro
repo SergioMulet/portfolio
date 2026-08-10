@@ -1,26 +1,28 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const base = import.meta.env.BASE_URL;
-const photoPath = `${base}/sergio_mulet.webp`
+const photoPath = `${base}/sergio_mulet.webp`;
+const abarthPhotoPath = `${base}/abarth.webp`;
 ---
 
 <BaseLayout title="About me | My Portfolio" lang="en">
   <section>
-    <h2>About me</h2>
+    <h2>Personal information</h2>
     <p>
-      Final-year Software Engineering student (English Itinerary) at Universidad 
-      de Oviedo. I have completed a professional internship in backend development, 
-      where I built real data pipelines using Python, AWS and PostgreSQL in a 
-      production environment.
+      Software Engineer from the University of Oviedo (Uniovi) focused on
+      building reliable, high-performance software. My core interests lie in
+      system architecture, backend engineering, IoT, and mobile solutions.
     </p>
     <p>
-      I'm comfortable working across languages and technologies (Python, Java, 
-      Node.js, Kotlin, C#) and I enjoy tackling problems end-to-end, from design 
-      to deployment. I care about clean code, user impact and effective teamwork.
+      I'm comfortable working across languages and technologies (Python, Java,
+      Node.js, Kotlin, C#) and I enjoy tackling problems end-to-end, from design
+      to deployment. I care about clean code, user impact and effective
+      teamwork.
     </p>
     <p>
-      I'm looking for an opportunity to keep growing alongside experienced engineers, 
-      ideally in an environment where technology makes a real difference.
+      I'm looking for an opportunity to keep growing alongside experienced
+      engineers, ideally in an environment where technology makes a real
+      difference.
     </p>
   </section>
 
@@ -40,7 +42,8 @@ const photoPath = `${base}/sergio_mulet.webp`
         <a
           href="https://linkedin.com/in/sergio-mulet-alonso"
           target="_blank"
-          rel="noopener noreferrer">https://linkedin.com/in/sergio-mulet-alonso</a
+          rel="noopener noreferrer"
+          >https://linkedin.com/in/sergio-mulet-alonso</a
         >
       </li>
       <li>
@@ -52,8 +55,20 @@ const photoPath = `${base}/sergio_mulet.webp`
         <a href="tel:+34684639102">+34 684 639 102</a>
       </li>
     </ul>
-    <figure>
-      <img src={photoPath}, alt="Sergio Mulet's profile picture"/>
-    </figure>
+    <img src={photoPath} , alt="Sergio Mulet" />
   </section>
+
+  <article>
+    <h2>Beyond the software 🦂</h2>
+    <p>
+      Outside of work, I enjoy spending time with my family and friends, but my
+      true passion—inspired by my father and a close friend—lies in the world of
+      motorsports. Growing up as a Formula 1 fan taught me to appreciate the
+      beauty of high-performance machines. This led me to the Abarth 595, a car
+      that perfectly embodies the balance between a solid base and raw, refined
+      power. Just like in software, I love simple things that are reliable,
+      efficient, and provide a great user experience.
+    </p>
+    <img src={abarthPhotoPath} , alt="My Abarth 595 turismo" />
+  </article>
 </BaseLayout>

@@ -2,8 +2,8 @@
 
 body {
   font-family: Tahoma, Arial, sans-serif;
-  color: #1C2333;
-  background-color: #F8FAFC;
+  color: #1c2333;
+  background-color: #f8fafc;
   line-height: 1.6;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -22,7 +22,7 @@ h2 {
 h1,
 h2,
 h3 {
-  color: #3B82F6;
+  color: #3b82f6;
 }
 
 section {
@@ -33,10 +33,10 @@ header section button {
   width: 3rem;
   height: 2rem;
   border: none;
-  background: transparent; 
-  padding: 0; 
+  background: transparent;
+  padding: 0;
   cursor: pointer;
-  outline: none; 
+  outline: none;
 
   background-image: var(--flag-url);
   background-size: cover;
@@ -45,7 +45,7 @@ header section button {
   border-radius: 0.25rem;
 }
 
-header section button:disabled{
+header section button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -55,7 +55,7 @@ header section button:hover {
 }
 
 footer {
-  color: #4A5164;
+  color: #4a5164;
   font-size: 0.8rem;
   margin-top: 4rem;
 }
@@ -75,22 +75,45 @@ h1 a {
 ul {
   list-style: none;
   padding: 0;
-  margin:0;
+  margin: 0;
 }
 
 ul li {
   margin-bottom: 0.75rem;
 }
 
-figure img{
-    width: 6rem;
-    height: auto;
-    object-fit: cover;
-    border-radius: 25%;
-    border: 0.2rem solid white;
+section img {
+  width: 8rem;
+  height: auto;
+  border-radius: 25%;
+  border: 0.2rem solid #3b82f6;
 }
 
-figure{
+article img {
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+article {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+article h3 {
   margin-top: 0;
 }
 
@@ -105,8 +128,8 @@ figure{
   }
 }
 
-@media(max-width: 800px){
-  body{
+@media (max-width: 800px) {
+  body {
     margin-left: auto;
     margin-right: auto;
   }

@@ -1,27 +1,29 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const base = import.meta.env.BASE_URL;
-const photoPath = `${base}/sergio_mulet.webp`;
+const profilePhotoPath = `${base}/sergio_mulet.webp`;
+const abarthPhotoPath = `${base}/abarth.webp`;
 ---
 
 <BaseLayout title="Sobre mí | Mi Portfolio" lang="es">
   <section>
     <h2>Sobre mí</h2>
     <p>
-      Estudiante de último año de Ingeniería del Software (modalidad Bilingüe) 
-      en la Universidad de Oviedo. He completado prácticas profesionales en 
-      desarrollo backend, donde construí pipelines de datos reales con Python, 
-      AWS y PostgreSQL en un entorno de producción.
+      Ingeniero de Software por la Universidad de Oviedo (Uniovi) enfocado en
+      desarrollar software fiable y de alto rendimiento. Mis intereses
+      principales se centran en la arquitectura de sistemas, ingeniería backend,
+      IoT y soluciones móviles.
     </p>
     <p>
-      Me muevo con soltura entre lenguajes y tecnologías (Python, Java, Node.js, 
-      Kotlin, C#) y disfruto resolviendo problemas desde el diseño hasta el 
-      despliegue. Me importa escribir código limpio, entender el impacto en el 
-      usuario y trabajar bien en equipo.
+      Me siento cómodo trabajando con diversos lenguajes y tecnologías (Python,
+      Java, Node.js, Kotlin, C#) y disfruto resolviendo problemas de extremo a
+      extremo, desde el diseño hasta el despliegue. Valoro el código limpio, el
+      impacto en el usuario y el trabajo en equipo eficaz.
     </p>
     <p>
-      Busco una oportunidad donde seguir creciendo junto a gente con experiencia, 
-      preferiblemente en un entorno donde la tecnología tenga impacto real.
+      Busco una oportunidad para seguir creciendo junto a ingenieros
+      experimentados, idealmente en un entorno donde la tecnología marque una
+      diferencia real.
     </p>
   </section>
 
@@ -41,7 +43,8 @@ const photoPath = `${base}/sergio_mulet.webp`;
         <a
           href="https://linkedin.com/in/sergio-mulet-alonso"
           target="_blank"
-          rel="noopener noreferrer">https://linkedin.com/in/sergio-mulet-alonso</a
+          rel="noopener noreferrer"
+          >https://linkedin.com/in/sergio-mulet-alonso</a
         >
       </li>
       <li>
@@ -54,8 +57,21 @@ const photoPath = `${base}/sergio_mulet.webp`;
       </li>
     </ul>
 
-    <figure>
-      <img src={photoPath} , alt="Foto de perfil Sergio Mulet" />
-    </figure>
+    <img src={profilePhotoPath} , alt="Foto de perfil Sergio Mulet" />
   </section>
+
+  <article>
+    <h2>Más allá del software 🦂</h2>
+    <p>
+      Fuera del trabajo, disfruto pasando tiempo con mi familia y amigos, pero
+      mi verdadera pasión, impulsada por mi padre y un amigo cercano, reside en
+      el mundo del motor. Crecer como seguidor de la Fórmula 1 me enseñó a
+      apreciar la belleza de los coches de alto rendimiento. Esto me llevó al
+      Abarth 595, un coche que encarna perfectamente el equilibrio entre una
+      base sólida y una potencia pura y refinada. Al igual que en el desarrollo
+      de software, me apasionan las cosas simples que son fiables, eficientes y
+      ofrecen una excelente experiencia al usuario.
+    </p>
+    <img src={abarthPhotoPath} , alt="Mi Abarth 595 turismo" />
+  </article>
 </BaseLayout>

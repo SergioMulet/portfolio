@@ -5,48 +5,41 @@ nav {
   flex-direction: row;
 }
 
-header section{
-    margin-left: auto;
+header section {
+  margin-left: auto;
 }
 
-.contact-section{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 2rem;
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.contact-section h2{
-    flex:1 1 100%;
+.contact-section h2 {
+  flex: 1 1 100%;
 }
 
-section figure{
-    flex: 1;
-    display: flex;
-    align-items: center;
+section {
+  margin-bottom: 4rem;
 }
 
-@media (max-width: 800px){
-    nav{
-        flex-direction: column;  
-    }
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+  }
 
-    header section{
-        margin-top: 1.5rem;
-        margin-left: 0;
-    }
+  header section {
+    margin-top: 1.5rem;
+    margin-left: 0;
+  }
 
-    section figure {
-        justify-content: flex-start;
-        width: 100%;
-    }
+  section ul {
+    text-align: left;
+  }
 
-    section ul{
-        text-align: left;
-    }
-
-    .contact-section{
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .contact-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

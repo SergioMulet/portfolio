@@ -11,14 +11,14 @@ const labels = {
     about: "Sobre mí",
     exp: "Experiencia",
     projects: "Proyectos",
-    role: "Estudiante de Ingeniería del Software",
+    role: "Ingeniero de Software",
   },
   en: {
     home: "Home",
     about: "About me",
     exp: "Experience",
     projects: "Projects",
-    role: "Software Engineer student",
+    role: "Software Engineer",
   },
 } as const;
 
