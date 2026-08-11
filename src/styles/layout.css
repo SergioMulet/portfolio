@@ -20,7 +20,8 @@ header section {
   flex: 1 1 100%;
 }
 
-section {
+section,
+article {
   margin-bottom: 4rem;
 }
 
