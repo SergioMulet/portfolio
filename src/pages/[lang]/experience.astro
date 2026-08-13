@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import content from "../../data/content.json";
+import type { Language } from "../../ts/translator";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "es" } },
+    { params: { lang: "en" } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Language };
+const t = content[lang];
+
+function renderMarkdown(text: string) {
+  return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+}
+---
+
+<BaseLayout title={t.siteTitle.experience} lang={lang}>
+  <section>
+    <h2>{t.experience.title}</h2>
+
+    {
+      t.experience.items.map((item) => (
+        <article>
+          <h3>{item.role}</h3>
+          <p class="date">
+            <time datetime={item.startDatetime}>{item.period.split(" — ")[0]}</time>
+            {" — "}
+            <time datetime={item.endDatetime}>{item.period.split(" — ")[1]}</time>
+          </p>
+
+          <p set:html={renderMarkdown(item.description)} />
+
+          <ul>
+            {item.bullets.map((bullet) => (
+              <li set:html={renderMarkdown(bullet)} />
+            ))}
+          </ul>
+
+          <p>
+            <a
+              href={item.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t.experience.viewRepo}
+            </a>
+          </p>
+          <p class="stack-list">
+            <strong>{t.experience.stack}:</strong> {item.stackList}
+          </p>
+        </article>
+      ))
+    }
+  </section>
+</BaseLayout>

@@ -1,0 +1,186 @@
+{
+  "es": {
+    "siteTitle": {
+      "home": "Sobre mí | Mi Portfolio",
+      "experience": "Experiencia | Mi Portfolio",
+      "projects": "Proyectos | Mi Portfolio"
+    },
+    "home": {
+      "aboutTitle": "Sobre mí",
+      "aboutParagraphs": [
+        "Ingeniero de Software por la Universidad de Oviedo (Uniovi) enfocado en desarrollar software fiable y de alto rendimiento. Mis intereses principales se centran en la arquitectura de sistemas, ingeniería backend, IoT y soluciones móviles.",
+        "Me siento cómodo trabajando con diversos lenguajes y tecnologías (Python, Java, Node.js, Kotlin, C#) y disfruto resolviendo problemas de extremo a extremo, desde el diseño hasta el despliegue. Valoro el código limpio, el impacto en el usuario y el trabajo en equipo eficaz.",
+        "Busco una oportunidad para seguir creciendo junto a ingenieros experimentados, idealmente en un entorno donde la tecnología marque una diferencia real."
+      ],
+      "contactTitle": "Contacto y redes",
+      "contactLabels": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "email": "Correo electrónico",
+        "phone": "Teléfono"
+      },
+      "passionTitle": "Más allá del software 🦂",
+      "passionParagraph": "Fuera del trabajo, disfruto pasando tiempo con mi familia y amigos, pero mi verdadera pasión, impulsada por mi padre y un amigo cercano, reside en el mundo del motor. Crecer como seguidor de la Fórmula 1 me enseñó a apreciar la belleza de los coches de alto rendimiento. Esto me llevó al Abarth 595, un coche que encarna perfectamente el equilibrio entre una base sólida y una potencia pura y refinada. Al igual que en el desarrollo de software, me apasionan las cosas simples que son fiables, eficientes y ofrecen una excelente experiencia al usuario.",
+      "profileAlt": "Foto de perfil Sergio Mulet",
+      "abarthAlt": "Mi Abarth 595 turismo"
+    },
+    "experience": {
+      "title": "Experiencia",
+      "viewRepo": "Ver repositorio",
+      "stack": "Stack",
+      "items": [
+        {
+          "role": "Prácticas Desarrollo Backend — Infone",
+          "period": "Septiembre 2025 — Noviembre 2025",
+          "startDatetime": "2025-09",
+          "endDatetime": "2025-11",
+          "description": "Durante mis prácticas curriculares en la startup **Infone**, participé activamente en su expansión hacia el sector inmobiliario. Mi rol se centró en diseñar y desarrollar desde cero procesos de automatización críticos para el modelo de negocio:",
+          "bullets": [
+            "**Pipeline de Clasificación Inmobiliaria:** Diseñé e implementé un pipeline automatizado en FastAPI para determinar la viabilidad financiera de clientes. El sistema automatiza el emparejamiento entre perfiles de usuarios y viviendas aptas.",
+            "**Extracción de Datos (OCR):** Integré AWS Textract y S3 para procesar documentos (PDF e imágenes), logrando la extracción automatizada de datos y eliminando procesos manuales.",
+            "**Trazabilidad y Observabilidad:** Implementé un sistema de logging estructurado con structlog, mejorando la monitorización y la resolución de errores en producción.",
+            "**Web Scraping:** Investigué y desarrollé soluciones con Browserbase (Stagehand) para la localización automatizada de activos inmobiliarios de particulares.",
+            "**Soft Skills:** El entorno de startup remota potenció mi capacidad de trabajo autónomo, gestión de tiempos y proactividad técnica."
+          ],
+          "repoUrl": "https://github.com/SergioMulet/OCR-payslip-evaluator",
+          "stackList": "Python, FastAPI, AWS (S3, Textract), Structlog, Browserbase, Git."
+        }
+      ]
+    },
+    "projects": {
+      "title": "Proyectos de software",
+      "subtitle": "Estos son algunos de los proyectos más relevantes que he ido haciendo:",
+      "viewRepo": "Ver repositorio",
+      "stack": "Stack",
+      "items": [
+        {
+          "title": "ShipsTracker — Sistema de seguimiento y visualizacion de barcos en tiempo real",
+          "category": "Trabajo fin de grado | 2026",
+          "description": "Sistema IoT de identificacion y visualización marítima mediante aplicaciones conectadas. Basado en el patron de diseño Publish/Subscribe mediante el uso del protocolo MQTT. Los usuarios descargan la aplicacion movil, se registran, y comienzan a mandar coordenadas al servidor central. Los barcos se pueden visualizar a traves de la pagina web en tiempo real mediante web sockets.",
+          "repoUrl": "https://github.com/SergioMulet/TFG",
+          "stackList": "React Native, React.js, InfluxDB, MQTT, Go + Gin, CI/CD, Docker."
+        },
+        {
+          "title": "Wichat — Quiz Web App",
+          "category": "Arquitectura del Software | 2025",
+          "description": "Aplicación web inspirada en el concurso \"Saber y Ganar\". Implementa una arquitectura robusta basada en el **Gateway Pattern** para centralizar la comunicación entre microservicios. Incluye la integración de un **LLM Chatbot** para dinamizar la experiencia del usuario. El proyecto fue realizando siguiendo metodologías ágiles.",
+          "repoUrl": "https://github.com/Arquisoft/wichat_en2a",
+          "stackList": "React, Node.js, Gateway Pattern, LLM, MongoDB."
+        },
+        {
+          "title": "RecadOS — Android App",
+          "category": "Software para dispositivos móviles | 2025",
+          "description": "Aplicación nativa para la gestión de recados y tareas colaborativas. Desarrollada en **Kotlin**, utiliza el ecosistema de **Google Cloud Firebase** para la persistencia de datos en tiempo real y la autenticación de usuarios. El proyecto fue realizado siguiendo SCRUM.",
+          "repoUrl": "https://github.com/SergioMulet/RecadOS",
+          "stackList": "Kotlin, Android SDK, Firebase."
+        },
+        {
+          "title": "Recuperación de información",
+          "category": "Repositorios de información | 2024",
+          "description": "Desarrollo de un motor de búsqueda avanzado que compara métodos de recuperación léxica (**BM25**) y semántica (**Vector Embeddings**). El proyecto se centra en la optimización de resultados mediante expansión de consultas y técnicas de **Reranking**, evaluando el rendimiento del sistema con métricas de precisión y F1-Score sobre el dataset NFCorpus.",
+          "repoUrl": "https://github.com/SergioMulet/Information_retrieval",
+          "stackList": "Python, BM25s, ChromaDB, Sentence-Transformers, PyTorch."
+        },
+        {
+          "title": "Simulación de Red Corporativa",
+          "category": "Administración de Sistemas y Redes | 2025",
+          "description": "Diseño y despliegue de una infraestructura de red interna mediante **Docker Compose**. El proyecto orquesta un entorno empresarial completo que incluye un servidor DNS (BIND9) para resolución de nombres interna, un servidor web Nginx, una base de datos MySQL y clientes personalizados, permitiendo validar la conectividad y el flujo de datos en un entorno aislado y controlado.",
+          "repoUrl": "https://github.com/SergioMulet/Red-Docker",
+          "stackList": "Docker, Docker Compose, BIND9 (DNS), Nginx, MySQL."
+        }
+      ]
+    }
+  },
+  "en": {
+    "siteTitle": {
+      "home": "About me | My Portfolio",
+      "experience": "Experience | My Portfolio",
+      "projects": "Projects | My Portfolio"
+    },
+    "home": {
+      "aboutTitle": "Personal information",
+      "aboutParagraphs": [
+        "Software Engineer from the University of Oviedo (Uniovi) focused on building reliable, high-performance software. My core interests lie in system architecture, backend engineering, IoT, and mobile solutions.",
+        "I'm comfortable working across languages and technologies (Python, Java, Node.js, Kotlin, C#) and I enjoy tackling problems end-to-end, from design to deployment. I care about clean code, user impact and effective teamwork.",
+        "I'm looking for an opportunity to keep growing alongside experienced engineers, ideally in an environment where technology makes a real difference."
+      ],
+      "contactTitle": "Contact & Socials",
+      "contactLabels": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "email": "Email",
+        "phone": "Phone"
+      },
+      "passionTitle": "Beyond the software 🦂",
+      "passionParagraph": "Outside of work, I enjoy spending time with my family and friends, but my true passion—inspired by my father and a close friend—lies in the world of motorsports. Growing up as a Formula 1 fan taught me to appreciate the beauty of high-performance machines. This led me to the Abarth 595, a car that perfectly embodies the balance between a solid base and raw, refined power. Just like in software, I love simple things that are reliable, efficient, and provide a great user experience.",
+      "profileAlt": "Sergio Mulet",
+      "abarthAlt": "My Abarth 595 turismo"
+    },
+    "experience": {
+      "title": "Experience",
+      "viewRepo": "View repository",
+      "stack": "Stack",
+      "items": [
+        {
+          "role": "Backend Development Intern — Infone",
+          "period": "September 2025 — November 2025",
+          "startDatetime": "2025-09",
+          "endDatetime": "2025-11",
+          "description": "During my curricular internship at the startup **Infone**, I actively participated in their expansion into the real estate sector. My role focused on designing and developing critical automation processes for their business model from scratch:",
+          "bullets": [
+            "**Real Estate Classification Pipeline:** Designed and implemented an automated pipeline in FastAPI to determine the financial viability of clients. The system automates the matching between user profiles and eligible housing.",
+            "**Data Extraction (OCR):** Integrated **AWS Textract** and **S3** to process documents (PDFs and images), achieving automated data extraction and eliminating manual workflows.",
+            "**Traceability and Observability:** Implemented a structured logging system using **structlog**, significantly improving system monitoring and production error resolution.",
+            "**Web Scraping:** Researched and developed solutions with **Browserbase (Stagehand)** for the automated location of real estate assets listed by private owners.",
+            "**Soft Skills:** The remote startup environment enhanced my capacity for **autonomous work**, time management, and technical proactivity."
+          ],
+          "repoUrl": "https://github.com/SergioMulet/OCR-payslip-evaluator",
+          "stackList": "Python, FastAPI, AWS (S3, Textract), Structlog, Browserbase, Git."
+        }
+      ]
+    },
+    "projects": {
+      "title": "Software Projects",
+      "subtitle": "Here are some of the most significant projects I have worked on:",
+      "viewRepo": "View repository",
+      "stack": "Stack",
+      "items": [
+        {
+          "title": "ShipsTracker — Maritime Identification and visualization system in real time",
+          "category": "Final degree project | 2026",
+          "description": "An IoT system for maritime identification and visualization through connected applications. It is based on the Publish/Subscribe design pattern and utilizes the MQTT protocol. Users download the mobile app, sign in, and begin sending coordinates to a central server. Vessels can be viewed in real time via the website using WebSockets.",
+          "repoUrl": "https://github.com/SergioMulet/TFG",
+          "stackList": "React Native, React.js, InfluxDB, MQTT, Go + Gin, CI/CD, Docker."
+        },
+        {
+          "title": "Wichat — Quiz Web App",
+          "category": "Software Architecture | 2025",
+          "description": "Web application inspired by the TV show \"Saber y Ganar\". It implements a robust architecture based on the **Gateway Pattern** to centralize communication between microservices. Includes the integration of an **LLM Chatbot** to enhance user experience. The project was developed following Agile methodologies.",
+          "repoUrl": "https://github.com/Arquisoft/wichat_en2a",
+          "stackList": "React, Node.js, Gateway Pattern, LLM, MongoDB."
+        },
+        {
+          "title": "RecadOS — Android App",
+          "category": "Mobile Software Development | 2025",
+          "description": "Native application for collaborative errand and task management. Developed in **Kotlin**, it leverages the **Google Cloud Firebase** ecosystem for real-time data persistence and user authentication. The project was carried out following the SCRUM framework.",
+          "repoUrl": "https://github.com/SergioMulet/RecadOS",
+          "stackList": "Kotlin, Android SDK, Firebase."
+        },
+        {
+          "title": "Information Retrieval Systems",
+          "category": "Information repositories | 2024",
+          "description": "Development of an advanced search engine comparing lexical (**BM25**) and semantic (**Vector Embeddings**) retrieval methods. The project focuses on result optimization through query expansion and **Reranking** techniques, evaluating system performance using precision and F1-Score metrics on the NFCorpus dataset.",
+          "repoUrl": "https://github.com/SergioMulet/Information_retrieval",
+          "stackList": "Python, BM25s, ChromaDB, Sentence-Transformers, PyTorch."
+        },
+        {
+          "title": "Corporate Network Simulation",
+          "category": "Systems and Network Administration | 2025",
+          "description": "Design and deployment of an internal network infrastructure using **Docker Compose**. The project orchestrates a complete business environment including a DNS server (BIND9) for internal name resolution, an Nginx web server, a MySQL database, and custom clients, validating connectivity and data flow in an isolated and controlled environment.",
+          "repoUrl": "https://github.com/SergioMulet/Red-Docker",
+          "stackList": "Docker, Docker Compose, BIND9 (DNS), Nginx, MySQL."
+        }
+      ]
+    }
+  }
+}

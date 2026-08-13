@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import content from "../../data/content.json";
+import type { Language } from "../../ts/translator";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "es" } },
+    { params: { lang: "en" } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Language };
+const t = content[lang];
+const base = import.meta.env.BASE_URL;
+const profilePhotoPath = `${base}/sergio_mulet.webp`;
+const abarthPhotoPath = `${base}/abarth.webp`;
+---
+
+<BaseLayout title={t.siteTitle.home} lang={lang}>
+  <section>
+    <h2>{t.home.aboutTitle}</h2>
+    {t.home.aboutParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+  </section>
+
+  <section class="contact-section">
+    <h2>{t.home.contactTitle}</h2>
+    <ul>
+      <li>
+        {t.home.contactLabels.github}:
+        <a
+          href="https://github.com/SergioMulet"
+          target="_blank"
+          rel="noopener noreferrer">github.com/SergioMulet</a
+        >
+      </li>
+      <li>
+        {t.home.contactLabels.linkedin}:
+        <a
+          href="https://linkedin.com/in/sergio-mulet-alonso"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://linkedin.com/in/sergio-mulet-alonso</a
+        >
+      </li>
+      <li>
+        {t.home.contactLabels.email}:
+        <a href="mailto:sergiokma15@gmail.com">sergiokma15@gmail.com</a>
+      </li>
+      <li>
+        {t.home.contactLabels.phone}:
+        <a href="tel:+34684639102">+34 684 639 102</a>
+      </li>
+    </ul>
+
+    <img src={profilePhotoPath} alt={t.home.profileAlt} />
+  </section>
+
+  <article>
+    <h2>{t.home.passionTitle}</h2>
+    <p>{t.home.passionParagraph}</p>
+    <img src={abarthPhotoPath} alt={t.home.abarthAlt} />
+  </article>
+</BaseLayout>
