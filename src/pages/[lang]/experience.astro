@@ -4,32 +4,33 @@ import content from "../../data/content.json";
 import type { Language } from "../../ts/translator";
 
 export function getStaticPaths() {
-  return [
-    { params: { lang: "es" } },
-    { params: { lang: "en" } },
-  ];
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
 
 const { lang } = Astro.params as { lang: Language };
-const t = content[lang];
+const pageInfo = content[lang];
 
 function renderMarkdown(text: string) {
   return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 }
 ---
 
-<BaseLayout title={t.siteTitle.experience} lang={lang}>
+<BaseLayout title={pageInfo.siteTitle.experience} lang={lang}>
   <section>
-    <h2>{t.experience.title}</h2>
+    <h2>{pageInfo.experience.title}</h2>
 
     {
-      t.experience.items.map((item) => (
+      pageInfo.experience.items.map((item) => (
         <article>
           <h3>{item.role}</h3>
           <p class="date">
-            <time datetime={item.startDatetime}>{item.period.split(" — ")[0]}</time>
+            <time datetime={item.startDatetime}>
+              {item.period.split(" — ")[0]}
+            </time>
             {" — "}
-            <time datetime={item.endDatetime}>{item.period.split(" — ")[1]}</time>
+            <time datetime={item.endDatetime}>
+              {item.period.split(" — ")[1]}
+            </time>
           </p>
 
           <p set:html={renderMarkdown(item.description)} />
@@ -41,16 +42,12 @@ function renderMarkdown(text: string) {
           </ul>
 
           <p>
-            <a
-              href={item.repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t.experience.viewRepo}
+            <a href={item.repoUrl} target="_blank" rel="noopener noreferrer">
+              {pageInfo.experience.viewRepo}
             </a>
           </p>
           <p class="stack-list">
-            <strong>{t.experience.stack}:</strong> {item.stackList}
+            <strong>{pageInfo.experience.stack}:</strong> {item.stackList}
           </p>
         </article>
       ))

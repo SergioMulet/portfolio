@@ -6,7 +6,8 @@
       "projects": "Proyectos | Mi Portfolio"
     },
     "home": {
-      "aboutTitle": "Sobre mí",
+      "aboutTitle": "Información personal",
+      "aboutMe": "Sobre mí",
       "aboutParagraphs": [
         "Ingeniero de Software por la Universidad de Oviedo (Uniovi) enfocado en desarrollar software fiable y de alto rendimiento. Mis intereses principales se centran en la arquitectura de sistemas, ingeniería backend, IoT y soluciones móviles.",
         "Me siento cómodo trabajando con diversos lenguajes y tecnologías (Python, Java, Node.js, Kotlin, C#) y disfruto resolviendo problemas de extremo a extremo, desde el diseño hasta el despliegue. Valoro el código limpio, el impacto en el usuario y el trabajo en equipo eficaz.",
@@ -54,7 +55,7 @@
       "stack": "Stack",
       "items": [
         {
-          "title": "ShipsTracker — Sistema de seguimiento y visualizacion de barcos en tiempo real",
+          "title": "ShipsTracker",
           "category": "Trabajo fin de grado | 2026",
           "description": "Sistema IoT de identificacion y visualización marítima mediante aplicaciones conectadas. Basado en el patron de diseño Publish/Subscribe mediante el uso del protocolo MQTT. Los usuarios descargan la aplicacion movil, se registran, y comienzan a mandar coordenadas al servidor central. Los barcos se pueden visualizar a traves de la pagina web en tiempo real mediante web sockets.",
           "repoUrl": "https://github.com/SergioMulet/TFG",
@@ -99,6 +100,7 @@
     },
     "home": {
       "aboutTitle": "Personal information",
+      "aboutMe": "About me",
       "aboutParagraphs": [
         "Software Engineer from the University of Oviedo (Uniovi) focused on building reliable, high-performance software. My core interests lie in system architecture, backend engineering, IoT, and mobile solutions.",
         "I'm comfortable working across languages and technologies (Python, Java, Node.js, Kotlin, C#) and I enjoy tackling problems end-to-end, from design to deployment. I care about clean code, user impact and effective teamwork.",
@@ -146,7 +148,7 @@
       "stack": "Stack",
       "items": [
         {
-          "title": "ShipsTracker — Maritime Identification and visualization system in real time",
+          "title": "ShipsTracker",
           "category": "Final degree project | 2026",
           "description": "An IoT system for maritime identification and visualization through connected applications. It is based on the Publish/Subscribe design pattern and utilizes the MQTT protocol. Users download the mobile app, sign in, and begin sending coordinates to a central server. Vessels can be viewed in real time via the website using WebSockets.",
           "repoUrl": "https://github.com/SergioMulet/TFG",

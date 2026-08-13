@@ -4,42 +4,35 @@ import content from "../../data/content.json";
 import type { Language } from "../../ts/translator";
 
 export function getStaticPaths() {
-  return [
-    { params: { lang: "es" } },
-    { params: { lang: "en" } },
-  ];
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
 
 const { lang } = Astro.params as { lang: Language };
-const t = content[lang];
+const pageInfo = content[lang];
 
 function renderMarkdown(text: string) {
   return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 }
 ---
 
-<BaseLayout title={t.siteTitle.projects} lang={lang}>
+<BaseLayout title={pageInfo.siteTitle.projects} lang={lang}>
   <section>
-    <h2>{t.projects.title}</h2>
-    <p>{t.projects.subtitle}</p>
+    <h2>{pageInfo.projects.title}</h2>
+    <p>{pageInfo.projects.subtitle}</p>
 
     {
-      t.projects.items.map((item) => (
+      pageInfo.projects.items.map((item) => (
         <article class="card">
           <h3>{item.title}</h3>
           <p class="date">{item.category}</p>
           <p set:html={renderMarkdown(item.description)} />
           <p>
-            <a
-              href={item.repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t.projects.viewRepo}
+            <a href={item.repoUrl} target="_blank" rel="noopener noreferrer">
+              {pageInfo.projects.viewRepo}
             </a>
           </p>
           <p class="stack-list">
-            <strong>{t.projects.stack}:</strong> {item.stackList}
+            <strong>{pageInfo.projects.stack}:</strong> {item.stackList}
           </p>
         </article>
       ))
