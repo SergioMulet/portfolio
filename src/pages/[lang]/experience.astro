@@ -10,6 +10,18 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: Language };
 const pageInfo = content[lang];
 
+interface ExperienceItem {
+  role: string;
+  period: string;
+  startDatetime: string;
+  endDatetime?: string;
+  description: string;
+  bullets: string[];
+  repoUrl?: string;
+  stackList: string;
+}
+const items: ExperienceItem[] = pageInfo.experience.items;
+
 function renderMarkdown(text: string) {
   return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 }
@@ -24,7 +36,7 @@ function renderMarkdown(text: string) {
     <h2>{pageInfo.experience.title}</h2>
 
     {
-      pageInfo.experience.items.map((item) => (
+      items.map((item) => (
         <article>
           <h3>{item.role}</h3>
           <p class="date">
@@ -32,9 +44,13 @@ function renderMarkdown(text: string) {
               {item.period.split(" — ")[0]}
             </time>
             {" — "}
-            <time datetime={item.endDatetime}>
-              {item.period.split(" — ")[1]}
-            </time>
+            {item.endDatetime ? (
+              <time datetime={item.endDatetime}>
+                {item.period.split(" — ")[1]}
+              </time>
+            ) : (
+              pageInfo.experience.present
+            )}
           </p>
 
           <p set:html={renderMarkdown(item.description)} />
@@ -45,11 +61,13 @@ function renderMarkdown(text: string) {
             ))}
           </ul>
 
-          <p>
-            <a href={item.repoUrl} target="_blank" rel="noopener noreferrer">
-              {pageInfo.experience.viewRepo}
-            </a>
-          </p>
+          {item.repoUrl && (
+            <p>
+              <a href={item.repoUrl} target="_blank" rel="noopener noreferrer">
+                {pageInfo.experience.viewRepo}
+              </a>
+            </p>
+          )}
           <p class="stack-list">
             <strong>{pageInfo.experience.stack}:</strong> {item.stackList}
           </p>

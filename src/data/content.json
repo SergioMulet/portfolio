@@ -6,17 +6,16 @@
       "projects": "Proyectos | Mi Portfolio"
     },
     "siteDescription": {
-      "home": "Portfolio de Sergio Mulet Alonso, Ingeniero de Software por la Universidad de Oviedo. Arquitectura de sistemas, backend, IoT y soluciones móviles.",
-      "experience": "Formación y experiencia profesional de Sergio Mulet Alonso, Ingeniero de Software especializado en backend, IoT y aplicaciones móviles.",
+      "home": "Portfolio de Sergio Mulet Alonso, ingeniero de software recién graduado. Product Engineer en Mecalux, con interés en arquitectura de sistemas, IoT y desarrollo móvil.",
+      "experience": "Experiencia profesional de Sergio Mulet Alonso: Product Engineer en Mecalux (software de gestión de almacenes), con prácticas previas en desarrollo backend.",
       "projects": "Proyectos de software de Sergio Mulet Alonso: backend, IoT y aplicaciones móviles, del diseño al despliegue."
     },
     "home": {
       "aboutTitle": "Información personal",
       "aboutMe": "Sobre mí",
       "aboutParagraphs": [
-        "Ingeniero de Software por la Universidad de Oviedo (Uniovi) enfocado en desarrollar software fiable y de alto rendimiento. Mis intereses principales se centran en la arquitectura de sistemas, ingeniería backend, IoT y soluciones móviles.",
-        "Me siento cómodo trabajando con diversos lenguajes y tecnologías (Python, Java, Node.js, Kotlin, C#) y disfruto resolviendo problemas de extremo a extremo, desde el diseño hasta el despliegue. Valoro el código limpio, el impacto en el usuario y el trabajo en equipo eficaz.",
-        "Busco una oportunidad para seguir creciendo junto a ingenieros experimentados, idealmente en un entorno donde la tecnología marque una diferencia real."
+        "Ingeniero de software recién graduado, con interés en arquitectura de sistemas y desarrollo móvil. Mi TFG fue un sistema IoT para seguridad marítima. Ahora trabajo como Product Engineer en Mecalux, sobre su producto de gestión de almacenes, y en paralelo aprendo Swift y Flutter. Me atrae especialmente el software que conecta con algo físico, no solo con una pantalla.",
+        "Busco seguir creciendo como ingeniero, aprendiendo de mis compañeros e investigando. Idealmente, me gustaría unirme a un equipo con un proyecto en construcción donde pueda aportar y mejorar."
       ],
       "contactTitle": "Contacto y redes",
       "contactLabels": {
@@ -36,6 +35,33 @@
       "stack": "Stack",
       "items": [
         {
+          "role": "Product Engineer — Mecalux",
+          "period": "Octubre 2026 — Actualidad",
+          "startDatetime": "2026-10",
+          "description": "Me incorporé al equipo de desarrollo de **EasyWMS**, el software de gestión de almacenes (SGA) de **Mecalux**, trabajando en el producto desde dentro del código:",
+          "bullets": [
+            "**Arquitectura:** Desarrollo en C# y .NET sobre una arquitectura hexagonal, con separación clara entre dominio y servicio, patrón Command, eventos y handlers.",
+            "**Testing:** Escritura de tests de aceptación en estilo Given-When-Then, con un lenguaje similar a Cucumber.",
+            "**Flujo de trabajo:** Git con pull requests, pipeline de CI obligatorio antes de llegar a master y revisión de código entre compañeros.",
+            "**Metodología:** Scrum con sprints de 4 semanas, dos dailies al día y retrospectiva al inicio de cada semana."
+          ],
+          "stackList": "C#, .NET, arquitectura hexagonal, Command pattern, Git, CI, Scrum."
+        },
+        {
+          "role": "Ingeniero de Soporte Remoto — Mecalux",
+          "period": "Agosto 2026 — Septiembre 2026",
+          "startDatetime": "2026-08",
+          "endDatetime": "2026-09",
+          "description": "Tras mis prácticas curriculares en la misma empresa (junio–julio de 2026), me incorporé a tiempo completo con contrato indefinido al departamento de soporte remoto de **Mecalux**, orientado a software de gestión de almacenes (SGA):",
+          "bullets": [
+            "**Resolución de incidencias:** Depuración de workflows, consultas SQL y administración de servicios para resolver incidencias de clientes.",
+            "**Mejora de procesos:** Análisis del flujo de trabajo del departamento para identificar ineficiencias.",
+            "**Portal ITSM:** Mejoras de interfaz con HTML, CSS y JavaScript, e introducción de funcionalidades de IA integradas con la API de IA de Mecalux.",
+            "**Investigación aplicada:** Estudio de arquitecturas de agentes de IA (MCP, OpenCode) para proponer automatizaciones."
+          ],
+          "stackList": "C#, .NET, LINQ, SQL, HTML, CSS, JavaScript, ITSM, API de IA, MCP, OpenCode."
+        },
+        {
           "role": "Prácticas Desarrollo Backend — Infone",
           "period": "Septiembre 2025 — Noviembre 2025",
           "startDatetime": "2025-09",
@@ -51,7 +77,8 @@
           "repoUrl": "https://github.com/SergioMulet/OCR-payslip-evaluator",
           "stackList": "Python, FastAPI, AWS (S3, Textract), Structlog, Browserbase, Git."
         }
-      ]
+      ],
+      "present": "Actualidad"
     },
     "projects": {
       "title": "Proyectos de software",
@@ -65,6 +92,12 @@
           "description": "Sistema IoT de identificacion y visualización marítima mediante aplicaciones conectadas. Basado en el patron de diseño Publish/Subscribe mediante el uso del protocolo MQTT. Los usuarios descargan la aplicacion movil, se registran, y comienzan a mandar coordenadas al servidor central. Los barcos se pueden visualizar a traves de la pagina web en tiempo real mediante web sockets.",
           "repoUrl": "https://github.com/SergioMulet/TFG",
           "stackList": "React Native, React.js, InfluxDB, MQTT, Go + Gin, CI/CD, Docker."
+        },
+        {
+          "title": "Apex Notes",
+          "category": "Proyecto personal | 2026 (en desarrollo)",
+          "description": "Aplicación móvil para recorrer tramos de carretera con un **copiloto de curvas**. El copiloto genera las notas (\"izquierda cerrada, se cierra\") a partir de la geometría de la ruta, calculando el radio de curvatura en cada punto y clasificando cada curva por dirección, severidad y forma. Las anuncia por voz y en pantalla según la posición GPS del móvil, con todo el cálculo en local. Arquitectura **MVVM** con patrón Repository y estado gestionado con Riverpod, autenticación con Firebase y persistencia offline con Firestore. Disponible en español e inglés.",
+          "stackList": "Flutter, Dart, Riverpod, go_router, Firebase (Auth, Firestore), flutter_map + OpenStreetMap, Geolocator."
         },
         {
           "title": "Wichat — Quiz Web App",
@@ -104,17 +137,16 @@
       "projects": "Projects | My Portfolio"
     },
     "siteDescription": {
-      "home": "Portfolio of Sergio Mulet Alonso, Software Engineer from the University of Oviedo. Systems architecture, backend, IoT and mobile solutions.",
-      "experience": "Education and professional experience of Sergio Mulet Alonso, Software Engineer focused on backend, IoT and mobile applications.",
+      "home": "Portfolio of Sergio Mulet Alonso, recently graduated software engineer. Product Engineer at Mecalux, interested in systems architecture, IoT and mobile development.",
+      "experience": "Professional experience of Sergio Mulet Alonso: Product Engineer at Mecalux (warehouse management software), with a previous backend development internship.",
       "projects": "Software projects by Sergio Mulet Alonso: backend, IoT and mobile applications, from design to deployment."
     },
     "home": {
       "aboutTitle": "Personal information",
       "aboutMe": "About me",
       "aboutParagraphs": [
-        "Software Engineer from the University of Oviedo (Uniovi) focused on building reliable, high-performance software. My core interests lie in system architecture, backend engineering, IoT, and mobile solutions.",
-        "I'm comfortable working across languages and technologies (Python, Java, Node.js, Kotlin, C#) and I enjoy tackling problems end-to-end, from design to deployment. I care about clean code, user impact and effective teamwork.",
-        "I'm looking for an opportunity to keep growing alongside experienced engineers, ideally in an environment where technology makes a real difference."
+        "Recently graduated software engineer interested in systems architecture and mobile development. My thesis was an IoT system for maritime safety. I now work as a Product Engineer at Mecalux on their warehouse management product, and I'm learning Swift and Flutter on the side. I'm especially drawn to software that connects to something physical, not just a screen.",
+        "I'm looking to keep growing as an engineer by learning from my teammates and doing research. Ideally, I'd like to join a team with a project under construction where I can contribute and improve things."
       ],
       "contactTitle": "Contact & Socials",
       "contactLabels": {
@@ -134,6 +166,33 @@
       "stack": "Stack",
       "items": [
         {
+          "role": "Product Engineer — Mecalux",
+          "period": "October 2026 — Present",
+          "startDatetime": "2026-10",
+          "description": "I joined the development team of **EasyWMS**, **Mecalux**'s warehouse management software (WMS), working on the product from inside the codebase:",
+          "bullets": [
+            "**Architecture:** Development in C# and .NET on a hexagonal architecture, with a clear separation between domain and service, the Command pattern, events and handlers.",
+            "**Testing:** Writing acceptance tests in Given-When-Then style, using a Cucumber-like language.",
+            "**Workflow:** Git with pull requests, a mandatory CI pipeline before reaching master, and peer code review.",
+            "**Methodology:** Scrum with 4-week sprints, two dailies a day and a retrospective at the start of each week."
+          ],
+          "stackList": "C#, .NET, hexagonal architecture, Command pattern, Git, CI, Scrum."
+        },
+        {
+          "role": "Remote Support Engineer — Mecalux",
+          "period": "August 2026 — September 2026",
+          "startDatetime": "2026-08",
+          "endDatetime": "2026-09",
+          "description": "After my curricular internship at the same company (June–July 2026), I joined the remote support department of **Mecalux** full-time on a permanent contract, focused on warehouse management software (WMS):",
+          "bullets": [
+            "**Incident resolution:** Debugging workflows, SQL queries and service administration to resolve customer incidents.",
+            "**Process improvement:** Analysis of the department's workflow to identify inefficiencies.",
+            "**ITSM portal:** Interface improvements with HTML, CSS and JavaScript, and AI features integrated with Mecalux's AI API.",
+            "**Applied research:** Study of AI agent architectures (MCP, OpenCode) to propose automation opportunities."
+          ],
+          "stackList": "C#, .NET, LINQ, SQL, HTML, CSS, JavaScript, ITSM, AI API, MCP, OpenCode."
+        },
+        {
           "role": "Backend Development Intern — Infone",
           "period": "September 2025 — November 2025",
           "startDatetime": "2025-09",
@@ -149,7 +208,8 @@
           "repoUrl": "https://github.com/SergioMulet/OCR-payslip-evaluator",
           "stackList": "Python, FastAPI, AWS (S3, Textract), Structlog, Browserbase, Git."
         }
-      ]
+      ],
+      "present": "Present"
     },
     "projects": {
       "title": "Software Projects",
@@ -163,6 +223,12 @@
           "description": "An IoT system for maritime identification and visualization through connected applications. It is based on the Publish/Subscribe design pattern and utilizes the MQTT protocol. Users download the mobile app, sign in, and begin sending coordinates to a central server. Vessels can be viewed in real time via the website using WebSockets.",
           "repoUrl": "https://github.com/SergioMulet/TFG",
           "stackList": "React Native, React.js, InfluxDB, MQTT, Go + Gin, CI/CD, Docker."
+        },
+        {
+          "title": "Apex Notes",
+          "category": "Personal project | 2026 (in development)",
+          "description": "Mobile app for driving road sections with a **corner co-driver**. It generates pace notes (\"tight left, tightens\") from the route geometry, computing the radius of curvature at each point and classifying every corner by direction, severity and shape. Notes are announced by voice and on screen based on the phone's GPS position, with all computation done locally. **MVVM** architecture with the Repository pattern and state managed with Riverpod, Firebase authentication and offline persistence with Firestore. Available in Spanish and English.",
+          "stackList": "Flutter, Dart, Riverpod, go_router, Firebase (Auth, Firestore), flutter_map + OpenStreetMap, Geolocator."
         },
         {
           "title": "Wichat — Quiz Web App",

@@ -10,6 +10,15 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: Language };
 const pageInfo = content[lang];
 
+interface ProjectItem {
+  title: string;
+  category: string;
+  description: string;
+  repoUrl?: string;
+  stackList: string;
+}
+const items: ProjectItem[] = pageInfo.projects.items;
+
 function renderMarkdown(text: string) {
   return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 }
@@ -25,16 +34,18 @@ function renderMarkdown(text: string) {
     <p>{pageInfo.projects.subtitle}</p>
 
     {
-      pageInfo.projects.items.map((item) => (
+      items.map((item) => (
         <article class="card">
           <h3>{item.title}</h3>
           <p class="date">{item.category}</p>
           <p set:html={renderMarkdown(item.description)} />
-          <p>
-            <a href={item.repoUrl} target="_blank" rel="noopener noreferrer">
-              {pageInfo.projects.viewRepo}
-            </a>
-          </p>
+          {item.repoUrl && (
+            <p>
+              <a href={item.repoUrl} target="_blank" rel="noopener noreferrer">
+                {pageInfo.projects.viewRepo}
+              </a>
+            </p>
+          )}
           <p class="stack-list">
             <strong>{pageInfo.projects.stack}:</strong> {item.stackList}
           </p>
