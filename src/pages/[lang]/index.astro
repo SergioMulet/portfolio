@@ -1,7 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import content from "../../data/content.json";
 import type { Language } from "../../ts/translator";
+import profilePhoto from "../../assets/sergio_mulet.webp";
+import abarthPhoto from "../../assets/abarth.webp";
 
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
@@ -9,9 +12,6 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: Language };
 const pageInfo = content[lang];
-const base = import.meta.env.BASE_URL;
-const profilePhotoPath = `${base}/sergio_mulet.webp`;
-const abarthPhotoPath = `${base}/abarth.webp`;
 ---
 
 <BaseLayout
@@ -54,13 +54,25 @@ const abarthPhotoPath = `${base}/abarth.webp`;
           <a href="tel:+34684639102">+34 684 639 102</a>
         </li>
       </ul>
-      <img src={profilePhotoPath} alt={pageInfo.home.profileAlt} />
+      <Image
+        src={profilePhoto}
+        alt={pageInfo.home.profileAlt}
+        width={800}
+        widths={[256, 512, 800]}
+        sizes="(max-width: 800px) 100vw, 8rem"
+        loading="eager"
+      />
     </article>
 
     <article>
       <h2>{pageInfo.home.passionTitle}</h2>
       <p>{pageInfo.home.passionParagraph}</p>
-      <img src={abarthPhotoPath} alt={pageInfo.home.abarthAlt} />
+      <Image
+        src={abarthPhoto}
+        alt={pageInfo.home.abarthAlt}
+        widths={[480, 800, 1236]}
+        sizes="(max-width: 800px) 100vw, 60vw"
+      />
     </article>
   </section>
 </BaseLayout>
