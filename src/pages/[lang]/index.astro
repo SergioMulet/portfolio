@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import content from "../../data/content.json";
-import type { Language } from "../../ts/translator";
+import { Translator, type Language } from "../../ts/translator";
 import profilePhoto from "../../assets/sergio_mulet.webp";
 import abarthPhoto from "../../assets/abarth.webp";
 
@@ -12,6 +12,8 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: Language };
 const pageInfo = content[lang];
+const translator = new Translator(lang);
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -19,6 +21,33 @@ const pageInfo = content[lang];
   description={pageInfo.siteDescription.home}
   lang={lang}
 >
+  <section>
+    <header>
+      <Image
+        src={profilePhoto}
+        alt={pageInfo.home.profileAlt}
+        width={800}
+        widths={[256, 512, 800]}
+        sizes="(max-width: 800px) 60vw, 12rem"
+        loading="eager"
+      />
+      <h2>{pageInfo.home.hero.headline}</h2>
+      <p>{pageInfo.home.hero.tagline}</p>
+      <ul>
+        <li>
+          <a href={translator.route("projects", base)}
+            >{pageInfo.home.hero.projects}</a
+          >
+        </li>
+        <li>
+          <a href="mailto:sergiokma15@gmail.com"
+            >{pageInfo.home.hero.contact}</a
+          >
+        </li>
+      </ul>
+    </header>
+  </section>
+
   <section>
     <h2>{pageInfo.home.aboutTitle}</h2>
     <article>
@@ -54,14 +83,6 @@ const pageInfo = content[lang];
           <a href="tel:+34684639102">+34 684 639 102</a>
         </li>
       </ul>
-      <Image
-        src={profilePhoto}
-        alt={pageInfo.home.profileAlt}
-        width={800}
-        widths={[256, 512, 800]}
-        sizes="(max-width: 800px) 100vw, 8rem"
-        loading="eager"
-      />
     </article>
 
     <article>

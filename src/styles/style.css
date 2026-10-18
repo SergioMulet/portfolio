@@ -59,7 +59,7 @@ footer {
   margin-top: 4rem;
 }
 
-header {
+body > header {
   border-bottom: 1px solid #dbeafe;
   margin-bottom: 2rem;
 }
@@ -86,7 +86,8 @@ nav a.active {
 }
 
 nav a:focus-visible,
-header section button:focus-visible {
+header section button:focus-visible,
+section > header a:focus-visible {
   outline: 3px solid #1d4ed8;
   outline-offset: 2px;
 }
@@ -190,5 +191,108 @@ article h3 {
 
   nav a.active {
     border-left-color: #3b82f6;
+  }
+}
+
+/* Home hero */
+
+section > header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "photo headline"
+    "photo tagline"
+    "photo links";
+  align-content: center;
+  column-gap: 2.5rem;
+}
+
+section > header img {
+  grid-area: photo;
+  width: 12rem;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.2rem solid #3b82f6;
+}
+
+section > header h2 {
+  grid-area: headline;
+  align-self: end;
+  margin: 0;
+  color: #1c2333;
+  font-size: 2.5rem;
+}
+
+section > header p {
+  grid-area: tagline;
+  margin: 0.5rem 0 1.5rem;
+  font-size: 1.15rem;
+}
+
+section > header ul {
+  grid-area: links;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+section > header li {
+  margin: 0;
+}
+
+section > header a {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid #1d4ed8;
+  border-radius: 0.5rem;
+  color: #1d4ed8;
+  font-weight: bold;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+section > header a:hover {
+  background-color: #dbeafe;
+}
+
+section > header li:first-child a {
+  background-color: #1d4ed8;
+  color: #fff;
+}
+
+section > header li:first-child a:hover {
+  background-color: #1e40af;
+}
+
+@media (max-width: 800px) {
+  section > header {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "headline"
+      "tagline"
+      "links";
+    justify-items: center;
+    text-align: center;
+    row-gap: 0.5rem;
+  }
+
+  section > header img {
+    width: 60%;
+    max-width: 12rem;
+  }
+
+  section > header h2 {
+    align-self: auto;
+    margin-top: 1rem;
+    font-size: 1.75rem;
+  }
+
+  section > header ul {
+    justify-content: center;
   }
 }

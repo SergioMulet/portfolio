@@ -26,8 +26,14 @@
       },
       "passionTitle": "Más allá del software 🦂",
       "passionParagraph": "Fuera del trabajo, disfruto pasando tiempo con mi familia y amigos, pero mi verdadera pasión, impulsada por mi padre y un amigo cercano, reside en el mundo del motor. Crecer como seguidor de la Fórmula 1 me enseñó a apreciar la belleza de los coches de alto rendimiento. Esto me llevó al Abarth 595, un coche que encarna perfectamente el equilibrio entre una base sólida y una potencia pura y refinada. Al igual que en el desarrollo de software, me apasionan las cosas simples que son fiables, eficientes y ofrecen una excelente experiencia al usuario.",
-      "profileAlt": "Foto de perfil Sergio Mulet",
-      "abarthAlt": "Mi Abarth 595 turismo"
+      "profileAlt": "Retrato de Sergio Mulet",
+      "abarthAlt": "Mi Abarth 595 turismo",
+      "hero": {
+        "headline": "Ingeniero de software",
+        "tagline": "Product Engineer en Mecalux. Me interesan la arquitectura de sistemas, el desarrollo móvil y el software que conecta con el mundo físico.",
+        "projects": "Ver proyectos",
+        "contact": "Contactar"
+      }
     },
     "experience": {
       "title": "Experiencia",
@@ -157,8 +163,14 @@
       },
       "passionTitle": "Beyond the software 🦂",
       "passionParagraph": "Outside of work, I enjoy spending time with my family and friends, but my true passion—inspired by my father and a close friend—lies in the world of motorsports. Growing up as a Formula 1 fan taught me to appreciate the beauty of high-performance machines. This led me to the Abarth 595, a car that perfectly embodies the balance between a solid base and raw, refined power. Just like in software, I love simple things that are reliable, efficient, and provide a great user experience.",
-      "profileAlt": "Sergio Mulet",
-      "abarthAlt": "My Abarth 595 turismo"
+      "profileAlt": "Portrait of Sergio Mulet",
+      "abarthAlt": "My Abarth 595 turismo",
+      "hero": {
+        "headline": "Software engineer",
+        "tagline": "Product Engineer at Mecalux. I'm interested in systems architecture, mobile development and software that connects to the physical world.",
+        "projects": "View projects",
+        "contact": "Get in touch"
+      }
     },
     "experience": {
       "title": "Experience",
