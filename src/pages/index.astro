@@ -1,5 +1,10 @@
 ---
-
+const base = import.meta.env.BASE_URL;
+const url = new URL(`${base}/`, Astro.site).href;
+const imageUrl = new URL(`${base}/og-image.jpg`, Astro.site).href;
+const title = "Sergio Mulet Alonso | Software Engineer";
+const description =
+  "Portfolio of Sergio Mulet Alonso, Software Engineer from the University of Oviedo. Systems architecture, backend, IoT and mobile solutions.";
 ---
 
 <!doctype html>
@@ -7,7 +12,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Redirecting...</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sergio Mulet Alonso" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sergio Mulet Alonso - Software Engineer" />
+    <meta name="twitter:card" content="summary_large_image" />
     <script>
       const lang = navigator.language.startsWith("es") ? "es" : "en";
       const base = "/portfolio/";

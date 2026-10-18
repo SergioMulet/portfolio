@@ -14,7 +14,11 @@ const profilePhotoPath = `${base}/sergio_mulet.webp`;
 const abarthPhotoPath = `${base}/abarth.webp`;
 ---
 
-<BaseLayout title={pageInfo.siteTitle.home} lang={lang}>
+<BaseLayout
+  title={pageInfo.siteTitle.home}
+  description={pageInfo.siteDescription.home}
+  lang={lang}
+>
   <section>
     <h2>{pageInfo.home.aboutTitle}</h2>
     <article>

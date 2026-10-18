@@ -5,6 +5,11 @@
       "experience": "Experiencia | Mi Portfolio",
       "projects": "Proyectos | Mi Portfolio"
     },
+    "siteDescription": {
+      "home": "Portfolio de Sergio Mulet Alonso, Ingeniero de Software por la Universidad de Oviedo. Arquitectura de sistemas, backend, IoT y soluciones móviles.",
+      "experience": "Formación y experiencia profesional de Sergio Mulet Alonso, Ingeniero de Software especializado en backend, IoT y aplicaciones móviles.",
+      "projects": "Proyectos de software de Sergio Mulet Alonso: backend, IoT y aplicaciones móviles, del diseño al despliegue."
+    },
     "home": {
       "aboutTitle": "Información personal",
       "aboutMe": "Sobre mí",
@@ -97,6 +102,11 @@
       "home": "About me | My Portfolio",
       "experience": "Experience | My Portfolio",
       "projects": "Projects | My Portfolio"
+    },
+    "siteDescription": {
+      "home": "Portfolio of Sergio Mulet Alonso, Software Engineer from the University of Oviedo. Systems architecture, backend, IoT and mobile solutions.",
+      "experience": "Education and professional experience of Sergio Mulet Alonso, Software Engineer focused on backend, IoT and mobile applications.",
+      "projects": "Software projects by Sergio Mulet Alonso: backend, IoT and mobile applications, from design to deployment."
     },
     "home": {
       "aboutTitle": "Personal information",

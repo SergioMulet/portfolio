@@ -15,7 +15,11 @@ function renderMarkdown(text: string) {
 }
 ---
 
-<BaseLayout title={pageInfo.siteTitle.projects} lang={lang}>
+<BaseLayout
+  title={pageInfo.siteTitle.projects}
+  description={pageInfo.siteDescription.projects}
+  lang={lang}
+>
   <section>
     <h2>{pageInfo.projects.title}</h2>
     <p>{pageInfo.projects.subtitle}</p>
