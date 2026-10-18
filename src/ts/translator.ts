@@ -12,6 +12,7 @@ const labels = {
     exp: "Experiencia",
     projects: "Proyectos",
     role: "Ingeniero de Software",
+    nav: "Navegación principal",
   },
   en: {
     home: "Home",
@@ -19,6 +20,7 @@ const labels = {
     exp: "Experience",
     projects: "Projects",
     role: "Software Engineer",
+    nav: "Main navigation",
   },
 } as const;
 

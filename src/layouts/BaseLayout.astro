@@ -73,36 +73,38 @@ const imageAlt = `${siteName} - ${translator.getLabel("role")}`;
           Sergio Mulet Alonso
         </a>
       </h1>
-      <nav>
+      <nav aria-label={translator.getLabel("nav")}>
         <a
           href={translator.route("", base)}
-          title={translator.getLabel("about")}
           class:list={[{ active: isActive("") }]}
+          aria-current={isActive("") ? "page" : undefined}
           >{translator.getLabel("about")}</a
         >
         <a
           href={translator.route("experience", base)}
-          title={translator.getLabel("exp")}
           class:list={[{ active: isActive("experience") }]}
+          aria-current={isActive("experience") ? "page" : undefined}
           >{translator.getLabel("exp")}</a
         >
         <a
           href={translator.route("projects", base)}
-          title={translator.getLabel("projects")}
           class:list={[{ active: isActive("projects") }]}
+          aria-current={isActive("projects") ? "page" : undefined}
           >{translator.getLabel("projects")}</a
         >
         <section>
           <button
             data-lang="es"
             style={`--flag-url: url('${base}/flags/flag_es.svg')`}
-            title="Cambiar a Español"
+            aria-label="Cambiar a Español"
+            lang="es"
           >
           </button>
           <button
             data-lang="en"
             style={`--flag-url: url('${base}/flags/flag_en.svg')`}
-            title="Switch to English"
+            aria-label="Switch to English"
+            lang="en"
           >
           </button>
         </section>
