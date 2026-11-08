@@ -106,6 +106,13 @@
           "stackList": "Flutter, Dart, Riverpod, go_router, Firebase (Auth, Firestore), flutter_map + OpenStreetMap, Geolocator."
         },
         {
+          "title": "Spendly — native iOS & Android App",
+          "category": "Proyecto personal | 2026 (en desarrollo)",
+          "description": "Gestor de gatos desarrollado con la intención de introducirme en el desarrollo de aplicaciones nativas para iOS mediante Swift. Arquitectura **MVVM** con SwiftData y Room como almacenamiento local",
+          "repoUrl": "https://github.com/SergioMulet/spendly",
+          "stackList": "Swift, SwiftUI, Kotlin, Jetpack Compose, Room, SwiftData, MVVM."
+        },
+        {
           "title": "Wichat — Quiz Web App",
           "category": "Arquitectura del Software | 2025",
           "description": "Aplicación web inspirada en el concurso \"Saber y Ganar\". Implementa una arquitectura robusta basada en el **Gateway Pattern** para centralizar la comunicación entre microservicios. Incluye la integración de un **LLM Chatbot** para dinamizar la experiencia del usuario. El proyecto fue realizando siguiendo metodologías ágiles.",
@@ -241,6 +248,13 @@
           "category": "Personal project | 2026 (in development)",
           "description": "Mobile app for driving road sections with a **corner co-driver**. It generates pace notes (\"tight left, tightens\") from the route geometry, computing the radius of curvature at each point and classifying every corner by direction, severity and shape. Notes are announced by voice and on screen based on the phone's GPS position, with all computation done locally. **MVVM** architecture with the Repository pattern and state managed with Riverpod, Firebase authentication and offline persistence with Firestore. Available in Spanish and English.",
           "stackList": "Flutter, Dart, Riverpod, go_router, Firebase (Auth, Firestore), flutter_map + OpenStreetMap, Geolocator."
+        },
+        {
+          "title": "Spendly — native iOS & Android App",
+          "category": "Personal project | 2026 (in development)",
+          "description": "Expenses management app developed with the intention of introducing myself to the development of native applications for iOS using Swift. **MVVM** architecture with SwiftData and Room as local storage",
+          "repoUrl": "https://github.com/SergioMulet/spendly",
+          "stackList": "Swift, SwiftUI, Kotlin, Jetpack Compose, Room, SwiftData, MVVM."
         },
         {
           "title": "Wichat — Quiz Web App",
